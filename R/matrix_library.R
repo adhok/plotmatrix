@@ -11,6 +11,7 @@
 #' @import gridExtra
 #' @import grid
 #' @import stringr
+#' @import magrittr
 #' @importFrom gtable is.gtable
 #' @importFrom ggplot2 ggplot geom_tile scale_fill_manual guides geom_tile ggplotGrob
 #' @importFrom ggplot2 geom_point geom_text scale_color_manual guides theme labs
