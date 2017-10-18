@@ -7,7 +7,7 @@
 plotmatrix(matrix, title = "", subtitle = "", low_color = "#132B43",
   high_color = "#56B1F7", legend_position = "top", xlabel = "",
   ylabel = "", title_size = 8, subtitle_size = 7, height = 0.9,
-  width = 0.9, color = "black")
+  width = 0.9, color = "black", key_size = 1.5)
 }
 \arguments{
 \item{matrix}{named data.frame or matrix}
@@ -34,6 +34,8 @@ plotmatrix(matrix, title = "", subtitle = "", low_color = "#132B43",
 
 \item{color}{color of the cell borders}
 
+\item{key_size}{size of legend keys}
+
 \item{header}{header of the Plot}
 }
 \description{
@@ -51,7 +53,7 @@ Chart title and x-axis and y-axis labels are optional.
 
 
 
-plotmatrix inspired by hrbrmstr's waffle package (@hrbrmstr)
+plotmatrix is inspired by hrbrmstr's waffle package (@hrbrmstr)
 }
 \examples{
 data_matrix  <- data.frame(a=c(1,0,0),b=c(0,1,0),c=c(0,0,1))

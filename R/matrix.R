@@ -30,6 +30,7 @@
 #' @param color color of the cell borders
 #' @param title_size size of the title text
 #' @param subtitle_size size of the subtitle text
+#' @param key_size size of legend keys
 #' @examples
 #' data_matrix  <- data.frame(a=c(1,0,0),b=c(0,1,0),c=c(0,0,1))
 #' plotmatrix(data_matrix)
@@ -55,7 +56,7 @@
 
 
 #'@export
-plotmatrix <- function(matrix,title="",subtitle="",low_color="#132B43",high_color="#56B1F7",legend_position="top",xlabel="",ylabel="",title_size=8,subtitle_size=7,height=0.9,width=0.9,color="black")
+plotmatrix <- function(matrix,title="",subtitle="",low_color="#132B43",high_color="#56B1F7",legend_position="top",xlabel="",ylabel="",title_size=8,subtitle_size=7,height=0.9,width=0.9,color="black",key_size=1.5)
 {
   options(warn = -1)
 
@@ -67,7 +68,7 @@ plotmatrix <- function(matrix,title="",subtitle="",low_color="#132B43",high_colo
                      axis.title=element_blank(),
                      legend.position = legend_position,
                      plot.title = element_text(hjust=0.5,size=title_size,face="bold"),
-                     plot.subtitle = element_text(face="italic",size=subtitle_size))}
+                     plot.subtitle = element_text(face="italic",size=subtitle_size),legend.key.size=unit(key_size, "cm"))}
 
 
 
