@@ -4,14 +4,13 @@
 \alias{plotmatrix}
 \title{Make charts with matrices}
 \usage{
-plotmatrix(matrix, header = "", subtitle = "", low_color = "#132B43",
+plotmatrix(matrix, title = "", subtitle = "", low_color = "#132B43",
   high_color = "#56B1F7", legend_position = "top", xlabel = "",
-  ylabel = "", text_size = 8, height = 0.9, width = 0.9)
+  ylabel = "", title_size = 8, subtitle_size = 7, height = 0.9,
+  width = 0.9, color = "black")
 }
 \arguments{
 \item{matrix}{named data.frame or matrix}
-
-\item{header}{header of the Plot}
 
 \item{subtitle}{subtitle of the Plot}
 
@@ -25,9 +24,17 @@ plotmatrix(matrix, header = "", subtitle = "", low_color = "#132B43",
 
 \item{ylabel}{ylabel for the chart}
 
+\item{title_size}{size of the title text}
+
+\item{subtitle_size}{size of the subtitle text}
+
 \item{height}{height of each cell}
 
 \item{width}{width of each cell}
+
+\item{color}{color of the cell borders}
+
+\item{header}{header of the Plot}
 }
 \description{
 Given a named matrix or a data frame, this function will return a ggplot object that
@@ -44,7 +51,7 @@ Chart title and x-axis and y-axis labels are optional.
 
 
 
-Glyph idea inspired by Ruben C. Arslan (@_r_c_a)
+plotmatrix inspired by hrbrmstr's waffle package (@hrbrmstr)
 }
 \examples{
 data_matrix  <- data.frame(a=c(1,0,0),b=c(0,1,0),c=c(0,0,1))
