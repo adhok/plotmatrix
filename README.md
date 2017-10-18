@@ -12,4 +12,6 @@ To install, please run ```devtools::install_github('adhok/plotmatrix')```
 
 ```plotmatrix(data_matrix,legend_position="none")```
 
+![](https://raw.githubusercontent.com/adhok/plotmatrix/master/images/simple_example.png)
+
 
