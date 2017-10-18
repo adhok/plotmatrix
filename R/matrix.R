@@ -11,22 +11,9 @@
 #'
 #' A matrix input is also allowed.
 #'
-#'
-#' It is highly suggested that you limit the number of elements
-#' to plot, just like you should if you ever got wasted and decided that a
-#' regular pie chart was a good thing to create and then decide to be totally
-#' evil and make one to pollute this beautiful world of ours.
-#'
 #' Chart title and x-axis and y-axis labels are optional.
 #'
 #'
-#' If you specify a string (vs \code{FALSE}) to \code{use_glyph} the function
-#' will map the input to a FontAwesome glyph name and use that glyph for the
-#' tile instead of a block (making it more like an isotype pictogram than a
-#' waffle chart). You'll need to install FontAwesome and use
-#' the \code{extrafont} package (\code{https://github.com/wch/extrafont}) to
-#' be able to use the FontAwesome glyphs. Sizing is also up to the user since
-#' fonts do not automatically scale with graphic resize.
 #'
 #' Glyph idea inspired by Ruben C. Arslan (@@_r_c_a)
 #'
@@ -35,17 +22,11 @@
 #' @param subtitle subtitle of the Plot
 #' @param low_color is the color assigned to the lowest value
 #' @param high_color is the color assigned to the highest value
-#' @param size width of the separator between blocks (defaults to \code{2})
-#' @param flip flips x & y axes
-#' @param equal by default, waffle uses \code{coord_equal}; this can cause
-#'     layout problems, so you an use this to disable it if you are using
-#'     ggsave or knitr to control output sizes (or manually sizing the chart)
-#' @param pad how many blocks to right-pad the grid with
-#' @param use_glyph use specified FontAwesome glyph
-#' @param glyph_size size of the FontAwesome font
 #' @param legend_position position of legend
 #' @param xlabel x label for the chart
 #' @param ylabel ylabel for the chart
+#' @param height height of each cell
+#' @param width width of each cell
 #' @examples
 #' data_matrix  <- data.frame(a=c(1,0,0),b=c(0,1,0),c=c(0,0,1))
 #' plotmatrix(data_matrix)
