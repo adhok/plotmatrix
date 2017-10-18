@@ -31,6 +31,7 @@
 #' @param title_size size of the title text
 #' @param subtitle_size size of the subtitle text
 #' @param key_size size of legend keys
+#' @param colour colour of the labels
 #' @examples
 #' data_matrix  <- data.frame(a=c(1,0,0),b=c(0,1,0),c=c(0,0,1))
 #' plotmatrix(data_matrix)
@@ -56,7 +57,7 @@
 
 
 #'@export
-plotmatrix <- function(matrix,title="",subtitle="",low_color="#132B43",high_color="#56B1F7",legend_position="top",xlabel="",ylabel="",title_size=8,subtitle_size=7,height=0.9,width=0.9,color="black",key_size=1.5)
+plotmatrix <- function(matrix,title="",subtitle="",low_color="#132B43",high_color="#56B1F7",legend_position="top",xlabel="",ylabel="",title_size=8,subtitle_size=7,height=0.9,width=0.9,color="black",key_size=1.5,colour="black")
 {
   options(warn = -1)
 
@@ -95,10 +96,14 @@ plotmatrix <- function(matrix,title="",subtitle="",low_color="#132B43",high_colo
     #print(head(df_mat_intermediate))
 
     p <- df_mat_intermediate %>%
-      ggplot2::ggplot(aes(x=reorder(type,as.numeric(type)),y=reorder(row_names,as.numeric(row_names)),fill=value))+ggplot2::geom_tile(height=height,width=width,color=color,size=0.1)+
-      ggplot2::scale_fill_continuous(high = high_color,low=low_color)+labs(title=title,subtitle=subtitle,x=xlabel,y=ylabel)
+      ggplot2::ggplot(aes(x=reorder(type,as.numeric(type)),y=reorder(row_names,as.numeric(row_names)),fill=value))+
+      ggplot2::geom_tile(height=height,width=width,color=color,size=0.1)+
+      ggplot2::scale_fill_continuous(high = high_color,low=low_color)+
+      labs(title=title,subtitle=subtitle,x=xlabel,y=ylabel)+
+      geom_text(aes(label=round(value,2)),colour=colour)
 
 
+    
 
   }else{
 
