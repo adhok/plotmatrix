@@ -15,7 +15,7 @@
 #'
 #'
 #'
-#' plotmatrix inspired by hrbrmstr's waffle package (@hrbrmstr)
+#' plotmatrix is inspired by hrbrmstr's waffle package (@hrbrmstr)
 #'
 #' @param matrix named data.frame or matrix
 #' @param header header of the Plot
