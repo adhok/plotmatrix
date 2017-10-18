@@ -27,3 +27,4 @@ To install, please run ```devtools::install_github('adhok/plotmatrix')```
 
 ```plotmatrix::plotmatrix(data_mat,high_color = "#ffffff",low_color = "#000000",legend_position ="none")```
 
+![](https://raw.githubusercontent.com/adhok/plotmatrix/master/images/simple_example_2.png)
