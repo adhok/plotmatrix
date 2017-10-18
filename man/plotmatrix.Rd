@@ -25,19 +25,9 @@ plotmatrix(matrix, header = "", subtitle = "", low_color = "#132B43",
 
 \item{ylabel}{ylabel for the chart}
 
-\item{size}{width of the separator between blocks (defaults to \code{2})}
+\item{height}{height of each cell}
 
-\item{flip}{flips x & y axes}
-
-\item{equal}{by default, waffle uses \code{coord_equal}; this can cause
-layout problems, so you an use this to disable it if you are using
-ggsave or knitr to control output sizes (or manually sizing the chart)}
-
-\item{pad}{how many blocks to right-pad the grid with}
-
-\item{use_glyph}{use specified FontAwesome glyph}
-
-\item{glyph_size}{size of the FontAwesome font}
+\item{width}{width of each cell}
 }
 \description{
 Given a named matrix or a data frame, this function will return a ggplot object that
@@ -50,20 +40,9 @@ will be taken as the rows of the matrix and the function will plot accordingly.
 
 A matrix input is also allowed.
 
-It is highly suggested that you limit the number of elements
-to plot, just like you should if you ever got wasted and decided that a
-regular pie chart was a good thing to create and then decide to be totally
-evil and make one to pollute this beautiful world of ours.
-
 Chart title and x-axis and y-axis labels are optional.
 
-If you specify a string (vs \code{FALSE}) to \code{use_glyph} the function
-will map the input to a FontAwesome glyph name and use that glyph for the
-tile instead of a block (making it more like an isotype pictogram than a
-waffle chart). You'll need to install FontAwesome and use
-the \code{extrafont} package (\code{https://github.com/wch/extrafont}) to
-be able to use the FontAwesome glyphs. Sizing is also up to the user since
-fonts do not automatically scale with graphic resize.
+
 
 Glyph idea inspired by Ruben C. Arslan (@_r_c_a)
 }
