@@ -7,7 +7,8 @@
 plotmatrix(matrix, title = "", subtitle = "", low_color = "#132B43",
   high_color = "#56B1F7", legend_position = "top", xlabel = "",
   ylabel = "", title_size = 8, subtitle_size = 7, height = 0.9,
-  width = 0.9, color = "black", key_size = 1.5, colour = "black")
+  width = 0.9, color = "black", key_size = 1.5, colour = "black",
+  text_include = FALSE)
 }
 \arguments{
 \item{matrix}{named data.frame or matrix}
@@ -37,6 +38,8 @@ plotmatrix(matrix, title = "", subtitle = "", low_color = "#132B43",
 \item{key_size}{size of legend keys}
 
 \item{colour}{colour of the labels}
+
+\item{text_include}{if text labels should be include; by default it is FALSE}
 
 \item{header}{header of the Plot}
 }
