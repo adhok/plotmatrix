@@ -22,7 +22,8 @@ To install, please run ```devtools::install_github('adhok/plotmatrix')```
 2 -0.9887316 -0.6361486806 -0.0109211 -1.2667987 -0.89614861
 3  1.0713024 -0.0490916700  0.3915213  2.2195224  1.24336632
 4 -1.1091824  0.0005946358 -0.1127620 -0.2016300  0.01867768
-5  0.5793194 -0.0534150915 -0.7101341  0.6496321  1.28138064```
+5  0.5793194 -0.0534150915 -0.7101341  0.6496321  1.28138064
+```
 
-```plotmatrix::plotmatrix(data_mat,high_color = "#ffffff",low_color = "#000000",legend_position = "none")```
+```plotmatrix::plotmatrix(data_mat,high_color = "#ffffff",low_color = "#000000",legend_position ="none")```
 
