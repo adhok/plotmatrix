@@ -67,7 +67,7 @@ plotmatrix <- function(matrix,title="",subtitle="",low_color="#132B43",high_colo
                      panel.grid.major = element_blank(),
                      axis.text.x = element_blank(),
                      axis.text.y = element_blank(),
-                     axis.title=element_blank(),
+                     axis.title=element_text(size=8),
                      legend.position = legend_position,
                      plot.title = element_text(hjust=0.5,size=title_size,face="bold"),
                      plot.subtitle = element_text(face="italic",size=subtitle_size),legend.key.size=unit(key_size, "cm"))}

@@ -57,4 +57,21 @@ cbind_gtable_max <- function(...) {
 
 }
 
+insert_unit <- function (x, values, after = length(x)) {
+  
+    lengx <- length(x)
+  
+      if (lengx == 0) return(values)
+   if (length(values) == 0) return(x)
+  
+      if (after <= 0) {
+          unit.c(values, x)
+        } else if (after >= lengx) {
+            unit.c(x, values)
+          } else {
+              unit.c(x[1L:after], values, x[(after + 1L):lengx])
+            }
+  
+    }
+
 
