@@ -42,7 +42,7 @@ plotmatrix::plotmatrix(matrix_5_10,text_include=TRUE,legend_position = "none")
 
 ## QR decomposition
 
-Let's try to visualize 
+Let's try to visualize a Q R Decomposition
 
 ```{r}
 matrix_3_3 <- as.matrix(matrix_3_3)
