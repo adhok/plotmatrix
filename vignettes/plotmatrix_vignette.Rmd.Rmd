@@ -31,7 +31,7 @@ plotmatrix::plotmatrix(matrix_3_3)
 
 ### A 5 by 10 matrix
 
-```{r fig.width=5,fig.height=20}
+```{r fig.width=5,fig.height=5}
 
 matrix_5_10<- data.frame(a=rnorm(10),b=rnorm(10),c=rnorm(10),d=rnorm(10),e=rnorm(10))
 
@@ -40,24 +40,4 @@ plotmatrix::plotmatrix(matrix_5_10,text_include=TRUE,legend_position = "none")
 ```
 
 
-## QR decomposition
 
-Let's try to visualize a Q R Decomposition
-
-```{r}
-matrix_3_3 <- as.matrix(matrix_3_3)
-
-qr_object <- qr(matrix_3_3)
-
-q_matrix <- qr.Q(qr_object)
-r_matrix <- qr.R(qr_object)
-
-q_plot <- plotmatrix::plotmatrix(q_matrix,title="Q Matrix",legend_position = 'none',text_include = TRUE)
-r_plot <- plotmatrix::plotmatrix(r_matrix,title="R Matrix",legend_position = 'none',text_include=TRUE)
-a_plot <- plotmatrix::plotmatrix(matrix_3_3,title="A Matrix",legend_position='none',text_include=TRUE)
-plotmatrix::side(q_plot,r_plot,a_plot)
-
-
-
-
-```
